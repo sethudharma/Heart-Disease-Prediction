@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Home page</title>
+
+  <script src="https://kit.fontawesome.com/47101d2035.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <style>
+    .center {
+      position: absolute;
+      text-align: center;
+      left: 50%;
+      top: 70%;
+      transform: translate(-50%, -50%);
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgb(230, 239, 245);
+    }
+  </style>
+</head>
+
+
+<body class="center">
+
+  <h1 style="color:rgb(44, 44, 90); font-weight: 700;">
+    <i class="fas fa-ship"></i> HEART DISEASE PREDICTION
+  </h1>
+  <form action="result">
+    {% csrf_token %}
+
+    <div class="form-group">
+      <input class="form-control" placeholder="age" type="text" required name="age">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="sex {0: Male, 1: Female}" required type="text" name="sex">
+    </div>
+
+    <div class="form-group">
+      <input class="form-control" placeholder="cp" required type="text" name="cp">
+    </div>
+
+    <div class="form-group">
+      <input class="form-control" placeholder="trestbps" required type="text" name="trestbps">
+    </div>
+
+    <div class="form-group">
+      <input class="form-control" placeholder="chol" required type="text" name="chol">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="fbs" required type="text" name="fbs">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="restecg" required type="text" name="restecg">
+    </div>
+
+    <div class="form-group">
+      <input class="form-control" placeholder="thalach" required type="text" name="thalach">
+    </div>
+    <div class="form-group">
+      <input class="form-control" placeholder="exang" required type="text" name="exang">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="oldpeak" required type="text" name="oldpeak">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="slope" required type="text" name="slope">
+    </div>
+
+    <div class="form-group">
+      <input class="form-control" placeholder="ca" required type="text" name="ca">
+    </div>
+   
+    <div class="form-group">
+      <input class="form-control" placeholder="thal" required type="text" name="thal">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="ECG_report" required type="text" name="ECG_report">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="FH" required type="text" name="FH">
+    </div>
+    <div class="form-group">
+      <input class="form-control" placeholder="FD" required type="text" name="FD">
+    </div> 
+    <div class="form-group">
+      <input class="form-control" placeholder="alcohol" required type="text" name="alcohol">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="smoking" required type="text" name="smoking">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="MT" required type="text" name="MT">
+    </div>       
+    <input class="btn btn-primary btn-lg btn-block" type="submit" value='Predict'>
+
+  </form>
+</body>
+
+</html>
